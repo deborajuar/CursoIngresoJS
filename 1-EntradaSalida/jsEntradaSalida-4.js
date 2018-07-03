@@ -4,6 +4,9 @@
 */
 function mostrar()
 {
-	
+	var nombre;
+	nombre=prompt ("Ingrese su nombre");
+	document.getElementById("elNombre").value=nombre;
+	/*en este caso para que se muestre el valor en el cuadro deseado se pone el document.getElementById("elNombre").value y luedo el "=nombre" diferente al ejercicio anterior. 
 }
 
