@@ -1,73 +1,52 @@
-/*
-
-jose m 25 
-maria f 15
-jesus m 33
-fer f 81
-
-
-
-
-
-*/
 function mostrar()
 {
+	var notas=0;
+	var contador=0;
+	var acumulador=0;
+	var edad=0;
 	var sexo;
-	var edad;
-	var contador;
-	var nombre;
-	var cantidadMujeres;
-	var cantidadHombres;
-	var cantidadMayores;
-	var cantidadMenores;
-
-	contador=0;
-	cantidadHombres=0;
-	cantidadMujeres=0;
-	cantidadMenores=0;
-	cantidadMayores=0;
+	var promedio=0;
+	var notaBaja=0;
+	var notaAlta=0;
+	var cantidadhombres=0;
 
 
-
-	while(contador<4)
+	while(contador<5)
 	{
+		notas=prompt("Ingrese nota");
+		notas=parseInt(notas);
+			
+			while(notas<0||notas>10)
+				{
+					alert("Ingrese nota valida")
+
+				}
+
+			if(contador==1)
+				{
+
+					notaAlta=notaBaja;
+				}
+			else
+				{
+					if(notas<notaBaja)
+					{
+						notaBaja=notaBaja;
+					}
+					
+				}
 		contador++;
-		nombre=prompt("Ingrese nombre valido");
-
-		sexo=prompt("Ingrese sexo valido");
-		while(sexo!="m"&&sexo!="f")
-		{
-			sexo=prompt("Ingrese sexo valido");
-		}
-
-		edad=prompt("ingrese edad");
-		edad=parseInt(edad);
-		while(isNaN(edad)||edad<0||edad>100)
-		{
-			edad=prompt("ingrese edad");
-			edad=parseInt(edad);
-		}
-
-		if(sexo=='f')
-		{
-			cantidadMujeres++;
-		}
-		else
-		{
-			cantidadHombres++;
-		}
-		if(edad>=18)
-		{
-			cantidadMayores++;
-		}
-		else
-		{
-			cantidadMenores++;
-		}
-	}	
-
-	document.write("<br>La cantidad de mujeres es: "+cantidadMujeres);
-	document.write("<br>La cantidad de hombres es: "+cantidadHombres);
-	document.write("<br>La cantidad de mayores es: "+cantidadMayores);
-	document.write("<br>La cantidad de Menores es: "+cantidadMenores);
+		acumulador=acumulador+notas;
+	}
+	
+promedio=acumulador/contador;
+document.write("promedio"+promedio);
+document.write("nota màs baja"+notaBaja);
 }
+/*Bienvenidos. 
+Realizar el algoritmo que permita el ingreso por prompt de las notas 
+(validar entre 0 y 10),la edad y el sexo (validar el sexo “f” o “m”)
+ de 5 alumnos, informar por alert: 
+a) El promedio de las notas totales. 
+b) La nota más baja y el sexo de esa persona. 
+c) La cantidad de varones mayores a 18, que su nota */
