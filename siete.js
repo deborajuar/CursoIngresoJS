@@ -1,52 +1,42 @@
 function mostrar()
 {
-	var notas=0;
-	var contador=0;
-	var acumulador=0;
-	var edad=0;
-	var sexo;
-	var promedio=0;
-	var notaBaja=0;
-	var notaAlta=0;
-	var cantidadhombres=0;
 
+	var ancho;
+	var nombre;
+	var alto;
+	var peso;
+
+	contador=0
 
 	while(contador<5)
 	{
-		notas=prompt("Ingrese nota");
-		notas=parseInt(notas);
-			
-			while(notas<0||notas>10)
-				{
-					alert("Ingrese nota valida")
+		nombre=prompt("ingrese nombre");
+		
+		alto=prompt("ingrese alto");
+		alto=parseInt(alto);
 
-				}
+		while(isNaN(alto)||alto<0||alto>10)
+		{
+			alto=prompt("ingrese alto");
+			alto=parseInt(alto);
 
-			if(contador==1)
-				{
-
-					notaAlta=notaBaja;
-				}
-			else
-				{
-					if(notas<notaBaja)
-					{
-						notaBaja=notaBaja;
-					}
-					
-				}
-		contador++;
-		acumulador=acumulador+notas;
+		}
 	}
-	
-promedio=acumulador/contador;
-document.write("promedio"+promedio);
-document.write("nota màs baja"+notaBaja);
+
+
+	alert("comentar esta linea 7");
 }
-/*Bienvenidos. 
-Realizar el algoritmo que permita el ingreso por prompt de las notas 
-(validar entre 0 y 10),la edad y el sexo (validar el sexo “f” o “m”)
- de 5 alumnos, informar por alert: 
-a) El promedio de las notas totales. 
-b) La nota más baja y el sexo de esa persona. 
-c) La cantidad de varones mayores a 18, que su nota */
+/*7-(2pts.) Realizar un algoritmo que permita el ingreso 
+
+del nombre,
+ el ancho,
+  el alto y 
+  el peso de 5 productos .Validar todos los datos, sabiendo que no puede tener más de 10 de ancho y 10 de alto, y su peso no puede superar los 1000 kilos. Informar: 
+a- el peso más pesado
+b- la altura más alta
+c- el menor ancho.
+d- la cantidad que tiene un peso entre 300 y 600 kilos.*/
+
+
+
+
